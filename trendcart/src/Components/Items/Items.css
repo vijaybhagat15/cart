@@ -1,0 +1,135 @@
+.items-wrapper {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 30px 20px;
+  text-align: center;
+  border: 2px solid rgb(209, 54, 244);
+  background-color: #edceed;
+  border-radius: 20px;
+}
+
+.items-wrapper h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c70cf1;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  background-color: #9333ea;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.items-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.item-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+}
+
+.item-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.item-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e20ee9;
+  margin: 5px 0;
+}
+
+.item-rating {
+  font-size: 1rem;
+  color: #f11af1;
+  font-weight: 600;
+}
+
+/* ========== Responsive Layouts ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .items-wrapper h3 {
+    font-size: 1.5rem;
+  }
+
+  .item-card {
+    width: 160px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .items-wrapper {
+    padding: 25px 10px;
+  }
+
+  .items-wrapper h3 {
+    font-size: 1.3rem;
+  }
+
+  .item-card {
+    width: 140px;
+    padding: 10px;
+  }
+
+  .item-card img {
+    max-height: 130px;
+  }
+
+  .item-name,
+  .item-price,
+  .item-rating {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .items-wrapper h3 {
+    font-size: 1.1rem;
+  }
+
+  .item-card {
+    width: 130px;
+    padding: 8px;
+  }
+
+  .item-card img {
+    max-height: 110px;
+  }
+
+  .item-name,
+  .item-price,
+  .item-rating {
+    font-size: 0.85rem;
+  }
+}

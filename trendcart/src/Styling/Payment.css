@@ -1,0 +1,159 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Container */
+.payment-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+
+/* Wrapper Box */
+.top-bottom {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+.top h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #4f46e5;
+}
+
+.total-amount {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* User Details */
+.user-details {
+  background-color: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.user-details:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.user-details h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.user-details p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Payment Options */
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.payment-btn,
+.qr-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.2);
+  transition: all 0.25s ease-in-out;
+}
+
+.payment-btn:hover,
+.qr-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(118, 75, 162, 0.3);
+}
+
+/* QR Code Section */
+.qr-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.qr-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.qr-section p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Payment Confirmation */
+.payment-confirmation {
+  margin-top: 12px;
+  color: #1d8f6e;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .top-bottom {
+    padding: 20px;
+  }
+
+  .top h2 {
+    font-size: 22px;
+  }
+
+  .total-amount {
+    font-size: 18px;
+  }
+
+  .payment-btn,
+  .qr-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .user-details h4 {
+    font-size: 16px;
+  }
+
+  .user-details p {
+    font-size: 14px;
+  }
+}

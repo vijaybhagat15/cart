@@ -1,0 +1,275 @@
+/* Base styles */
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.men-page {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.men-page h2 {
+  color: #ece4e4;
+  margin-right: 10px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 28px;
+  margin-bottom: 2px;
+  background-color: #bd45ed;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.category {
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #eb79f1;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
+
+.category:hover {
+  color: #dc4de6;
+}
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(203, 18, 188);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  width: 200px;
+  z-index: 10;
+  padding: 8px 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Show dropdown when active */
+.show-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(5px) !important;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
+  padding: 12px 15px;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown li:hover {
+  background: #f9e1fc;
+  color: #d633ed;
+  transform: translateX(5px);
+}
+
+.men-page img {
+  width: 90%;
+  height: 300px;
+  border: 1px solid rgb(247, 245, 245);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.men-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.men-product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 220px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.men-product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.product-info h3 {
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #c222de;
+}
+
+.rating {
+  font-size: 14px;
+  color: #ff9800;
+}
+
+.men-product-card button {
+  background: #c222de;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.men-product-card button:hover {
+  background: #73038d;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .men-page {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .men-page h2 {
+    font-size: 24px;
+  }
+
+  .category-list {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .dropdown {
+    left: 0;
+    transform: none;
+    top: 35px;
+  }
+
+  .men-page img {
+    height: 220px;
+  }
+
+  .men-product-card {
+    width: 45%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .men-page {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .men-page h2 {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .category-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dropdown {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+    transform: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .show-dropdown {
+    position: static;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .men-page img {
+    height: 180px;
+  }
+
+  .men-product-card {
+    width: 90%;
+    margin: auto;
+  }
+
+  .product-info h3 {
+    font-size: 13px;
+  }
+
+  .price,
+  .rating {
+    font-size: 14px;
+  }
+
+  .men-product-card button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}

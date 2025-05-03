@@ -1,0 +1,150 @@
+.hero-container {
+  padding: 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  margin: auto;
+}
+
+.hero-heading {
+  font-size: 1.8rem;
+  background-color: #9c5bd9;
+  color: rgb(240, 231, 231);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+
+.highlight-text {
+  color: #ebd407;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-image-wrapper {
+  margin: 1rem auto;
+}
+
+.hero-main-image {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+  border: #9333ea 2px solid;
+}
+
+.toggle-section {
+  margin-top: 1rem;
+}
+
+.toggle-btn {
+  padding: 0.6rem 1.5rem;
+  background-color: #9333ea;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-box {
+  background: #e9d5ff;
+  border: 2px solid #d648ec;
+  padding: 1rem;
+  border-radius: 15px;
+  min-width: 280px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.hero-box:hover {
+  background-color: #d8b4fe;
+  transform: translateY(-5px);
+}
+
+.collection-btn {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background: #a78bfa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.scrolling-img-wrapper {
+  max-width: 300px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.scrolling-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: scrollLeft 8s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.video-section {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-heading {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .collection-btn,
+  .toggle-btn {
+    width: 80%;
+  }
+
+  .hero-box {
+    margin-bottom: 1rem;
+  }
+}

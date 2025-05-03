@@ -1,0 +1,175 @@
+.footer {
+  color: rgb(43, 41, 41);
+  text-align: center;
+  padding: 40px 10%;
+  background-color: #efd3f2;
+  width: 1300px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+.footer-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.subscribe-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.subscribe-box button {
+  padding: 10px 16px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscribe-box button:hover {
+  background: #e63946;
+  transform: scale(1.05);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.company-info {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.company-info a {
+  color: rgb(12, 12, 12);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.company-info a:hover {
+  text-decoration: underline;
+}
+
+.go-to-top {
+  background-color: #a93dbe;
+  color: rgb(235, 227, 227);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto 0;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Laptops & Tablets */
+@media (max-width: 1024px) {
+  .footer-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .subscribe-box input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .subscribe-box button {
+    width: auto;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 6%;
+  }
+
+  .footer-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-content p {
+    font-size: 0.95rem;
+  }
+
+  .subscribe-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscribe-box input,
+  .subscribe-box button {
+    width: 100%;
+  }
+
+  .go-to-top {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 4%;
+  }
+
+  .footer-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-content p,
+  .company-info {
+    font-size: 0.85rem;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
